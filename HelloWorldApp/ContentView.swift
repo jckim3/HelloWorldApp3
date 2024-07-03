@@ -21,9 +21,9 @@ struct ContentView: View {
 
             Button(action: {
                 // 첫 번째 버튼이 눌렸을 때 메시지 변경
-                message = "첫 번째 버튼이 눌렸습니다."
+                message = "Pressed Button 1"
             }) {
-                Text("첫 번째 버튼")
+                Text("Button 1")
                     .padding()
                     .background(Color.blue)
                     .foregroundColor(.white)
@@ -32,9 +32,9 @@ struct ContentView: View {
 
             Button(action: {
                 // 두 번째 버튼이 눌렸을 때 메시지 변경
-                message = "두 번째 버튼이 눌렸습니다."
+                message = "Pressed Button 2"
             }) {
-                Text("두 번째 버튼")
+                Text("Button 2")
                     .padding()
                     .background(Color.green)
                     .foregroundColor(.white)
