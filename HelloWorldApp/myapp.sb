@@ -1,0 +1,4 @@
+(version 1)
+(allow file-read* (literal "/Library/Preferences/com.apple.networkd.plist"))
+(allow network*)
+

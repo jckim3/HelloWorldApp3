@@ -14,6 +14,7 @@
 		A54E72982C33647600772899 /* HelloWorldAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E72972C33647600772899 /* HelloWorldAppTests.swift */; };
 		A54E72A22C33647600772899 /* HelloWorldAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E72A12C33647600772899 /* HelloWorldAppUITests.swift */; };
 		A54E72A42C33647600772899 /* HelloWorldAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E72A32C33647600772899 /* HelloWorldAppUITestsLaunchTests.swift */; };
+		A5E8B7CE2C3748D800A97931 /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5E8B7CD2C3748D800A97931 /* info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		A54E729D2C33647600772899 /* HelloWorldAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloWorldAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A54E72A12C33647600772899 /* HelloWorldAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldAppUITests.swift; sourceTree = "<group>"; };
 		A54E72A32C33647600772899 /* HelloWorldAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A5E8B7CC2C37461300A97931 /* HelloWorldAppRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelloWorldAppRelease.entitlements; sourceTree = "<group>"; };
+		A5E8B7CD2C3748D800A97931 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 				A54E72832C33647400772899 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		A54E72832C33647400772899 /* Products */ = {
 			isa = PBXGroup;
@@ -95,11 +99,13 @@
 		A54E72842C33647400772899 /* HelloWorldApp */ = {
 			isa = PBXGroup;
 			children = (
+				A5E8B7CC2C37461300A97931 /* HelloWorldAppRelease.entitlements */,
 				A54E72852C33647400772899 /* HelloWorldAppApp.swift */,
 				A54E72872C33647400772899 /* ContentView.swift */,
 				A54E72892C33647600772899 /* Assets.xcassets */,
 				A54E728B2C33647600772899 /* HelloWorldApp.entitlements */,
 				A54E728C2C33647600772899 /* Preview Content */,
+				A5E8B7CD2C3748D800A97931 /* info.plist */,
 			);
 			path = HelloWorldApp;
 			sourceTree = "<group>";
@@ -139,6 +145,7 @@
 				A54E727E2C33647400772899 /* Sources */,
 				A54E727F2C33647400772899 /* Frameworks */,
 				A54E72802C33647400772899 /* Resources */,
+				A5E8B7D12C374BF600A97931 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -236,6 +243,7 @@
 			files = (
 				A54E728E2C33647600772899 /* Preview Assets.xcassets in Resources */,
 				A54E728A2C33647600772899 /* Assets.xcassets in Resources */,
+				A5E8B7CE2C3748D800A97931 /* info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +262,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A5E8B7D12C374BF600A97931 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A54E727E2C33647400772899 /* Sources */ = {
@@ -431,12 +461,14 @@
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -458,7 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = HelloWorldApp/HelloWorldApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = HelloWorldApp/HelloWorldAppRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -472,12 +504,14 @@
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
