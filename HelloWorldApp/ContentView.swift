@@ -9,65 +9,133 @@ import SwiftUI
 import Combine
 
 struct ContentView: View {
-    @State private var message: String = "Hello, world! Carriage Motor Inn"
+    @State private var message: String = "Loading..."
     @State private var cancellable: AnyCancellable?
 
     var body: some View {
-        VStack(spacing: 20) { // 간격을 추가하여 버튼 간의 간격을 벌림
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text(message)
-                .padding()
-
-            Button(action: {
-                // 첫 번째 버튼이 눌렸을 때 API 호출
-                fetchAvailableRoomsCount()
-            }) {
-                Text("Get # of Empty Room")
+        ZStack {
+            // 배경 그라데이션
+            LinearGradient(gradient: Gradient(colors: [Color.blue, Color.purple]),
+                           startPoint: .topLeading,
+                           endPoint: .bottomTrailing)
+            .edgesIgnoringSafeArea(.all)
+            
+            VStack(spacing: 20) { // 간격을 추가하여 버튼 간의 간격을 벌림
+                
+                // 날짜를 오른쪽 상단에 표시
+                HStack {
+                    Spacer()
+                    Text(currentDateString())
+                        .padding()
+                        .background(Color.white.opacity(0.7))
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
+                        .foregroundColor(.black) // 텍스트 색상 설정
+                }
+                .padding(.top, 20)
+                .padding(.trailing, 20)
+                
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
+                
+                Text(message)
+                    .font(.title) // 글꼴 크기 설정
+                    .fontWeight(.bold) // 글꼴 굵기 설정
                     .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
+                    .background(Color.white.opacity(0.8))
                     .cornerRadius(10)
+                    .shadow(radius: 10)
+                    .foregroundColor(.black) // 텍스트 색상 설정
+                
+                Button(action: {
+                    // 첫 번째 버튼이 눌렸을 때 API 호출
+                    fetchAvailableRoomsCount()
+                }) {
+                    Text("Get # of Empty Room")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
+                }
+                
+                Button(action: {
+                    // 두 번째 버튼이 눌렸을 때 API 호출
+                    fetchCurrentMonthSales()
+                }) {
+                    Text("Get Current Month Sales")
+                        .padding()
+                        .background(Color.red)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
+                }
+                
+                Button(action: {
+                    // 새로운 세 번째 버튼이 눌렸을 때 API 호출
+                    fetchRoomRentStatus()
+                }) {
+                    Text("Get Room Rent Status")
+                        .padding()
+                        .background(Color.orange)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                        .shadow(radius: 5)
+                }
+                
+                
             }
-
-            Button(action: {
-                // 두 번째 버튼이 눌렸을 때 API 호출
-                fetchCurrentMonthSales()
-            }) {
-                Text("Get Current Month Sales")
-                    .padding()
-                    .background(Color.red)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-            }
-
-            Button(action: {
-                // 새로운 세 번째 버튼이 눌렸을 때 API 호출
-                fetchRoomRentStatus()
-            }) {
-                Text("Get Room Rent Status")
-                    .padding()
-                    .background(Color.orange)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-            }
-
-            Button(action: {
-                // 네 번째 버튼이 눌렸을 때 메시지 변경
-                message = "Pressed Button 2"
-            }) {
-                Text("Button 2")
-                    .padding()
-                    .background(Color.green)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-            }
+            .padding()
         }
-        .padding()
+        .onAppear {
+            fetchInitialMessage()
+        }
     }
+    
+    func fetchInitialMessage() {
+            guard let url = URL(string: "http://192.168.0.192:81/api/motel/status") else {
+                message = "Invalid URL"
+                return
+            }
 
+        cancellable = URLSession.shared.dataTaskPublisher(for: url)
+                    .tryMap { result -> String in
+                        guard let response = result.response as? HTTPURLResponse else {
+                            throw URLError(.badServerResponse)
+                        }
+                        print("Response status code: \(response.statusCode)")
+                        guard response.statusCode == 200 else {
+                            throw URLError(.badServerResponse)
+                        }
+                        return String(data: result.data, encoding: .utf8) ?? "Invalid data"
+                    }
+                    .receive(on: DispatchQueue.main)
+                    .sink(
+                        receiveCompletion: { completion in
+                            switch completion {
+                            case .finished:
+                                break
+                            case .failure(let error):
+                                message = "Error: \(error.localizedDescription)"
+                                print("Error: \(error)")
+                            }
+                        },
+                        receiveValue: { fetchedMessage in
+                            message = fetchedMessage
+                        }
+                    )
+        }
+    // 현재 날짜를 문자열로 반환하는 함수
+    func currentDateString() -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        return formatter.string(from: Date())
+    }
+    
     func fetchAvailableRoomsCount() {
+        //guard let url = URL(string: "https://carriagemotorinn.ddns.net:444/api/motel/available-rooms-count") else {
         guard let url = URL(string: "http://192.168.0.192:81/api/motel/available-rooms-count") else {
             message = "Invalid URL"
             return
@@ -176,8 +244,8 @@ struct ContentView: View {
                        }
                    },
                    receiveValue: { paymentTypeCounts in
-                                          message = "Room Rent Status - Daily: \(paymentTypeCounts.da), Weekly: \(paymentTypeCounts.wk), Montly: \(paymentTypeCounts.mo), Week Voucher: \(paymentTypeCounts.wc), Master Lease: \(paymentTypeCounts.ml)"
-                                      }
+                       message = "Rents- Daily: \(paymentTypeCounts.da), Weekly: \(paymentTypeCounts.wk), Monthly: \(paymentTypeCounts.mo), Week Voucher: \(paymentTypeCounts.wc), Master Lease: \(paymentTypeCounts.ml)"
+                   }
                )
        }
 }
