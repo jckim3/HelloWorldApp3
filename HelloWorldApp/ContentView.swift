@@ -11,6 +11,8 @@ import Combine
 struct ContentView: View {
     @State private var message: String = "Loading..."
     @State private var cancellable: AnyCancellable?
+    // Base URL 변수
+    private let baseURL = "http://192.168.0.192:81/api/motel"
 
     var body: some View {
         ZStack {
@@ -94,7 +96,7 @@ struct ContentView: View {
     }
     
     func fetchInitialMessage() {
-            guard let url = URL(string: "http://192.168.0.192:81/api/motel/status") else {
+            guard let url = URL(string: "\(baseURL)/status") else {
                 message = "Invalid URL"
                 return
             }
@@ -136,7 +138,7 @@ struct ContentView: View {
     
     func fetchAvailableRoomsCount() {
         //guard let url = URL(string: "https://carriagemotorinn.ddns.net:444/api/motel/available-rooms-count") else {
-        guard let url = URL(string: "http://192.168.0.192:81/api/motel/available-rooms-count") else {
+        guard let url = URL(string: "\(baseURL)/available-rooms-count") else {
             message = "Invalid URL"
             return
         }
@@ -171,7 +173,7 @@ struct ContentView: View {
        }
 
     func fetchCurrentMonthSales() {
-        guard let url = URL(string: "http://192.168.0.192:81/api/motel/sales/current-month") else {
+        guard let url = URL(string: "\(baseURL)/sales/current-month") else {
             message = "Invalid URL"
             return
         }
@@ -215,7 +217,7 @@ struct ContentView: View {
        }
 
     func fetchRoomRentStatus() {
-        guard let url = URL(string: "http://192.168.0.192:81/api/motel/rooms/payment-types") else {
+        guard let url = URL(string: "\(baseURL)/rooms/payment-types") else {
             message = "Invalid URL"
             return
         }
