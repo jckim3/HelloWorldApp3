@@ -14,7 +14,7 @@
 		A54E72982C33647600772899 /* HelloWorldAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E72972C33647600772899 /* HelloWorldAppTests.swift */; };
 		A54E72A22C33647600772899 /* HelloWorldAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E72A12C33647600772899 /* HelloWorldAppUITests.swift */; };
 		A54E72A42C33647600772899 /* HelloWorldAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E72A32C33647600772899 /* HelloWorldAppUITestsLaunchTests.swift */; };
-		A5E8B7CE2C3748D800A97931 /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5E8B7CD2C3748D800A97931 /* info.plist */; };
+		A5E8B7CE2C3748D800A97931 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5E8B7CD2C3748D800A97931 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,7 @@
 		A54E72A12C33647600772899 /* HelloWorldAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldAppUITests.swift; sourceTree = "<group>"; };
 		A54E72A32C33647600772899 /* HelloWorldAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A5E8B7CC2C37461300A97931 /* HelloWorldAppRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HelloWorldAppRelease.entitlements; sourceTree = "<group>"; };
-		A5E8B7CD2C3748D800A97931 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
+		A5E8B7CD2C3748D800A97931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,7 @@
 				A54E72892C33647600772899 /* Assets.xcassets */,
 				A54E728B2C33647600772899 /* HelloWorldApp.entitlements */,
 				A54E728C2C33647600772899 /* Preview Content */,
-				A5E8B7CD2C3748D800A97931 /* info.plist */,
+				A5E8B7CD2C3748D800A97931 /* Info.plist */,
 			);
 			path = HelloWorldApp;
 			sourceTree = "<group>";
@@ -243,7 +243,7 @@
 			files = (
 				A54E728E2C33647600772899 /* Preview Assets.xcassets in Resources */,
 				A54E728A2C33647600772899 /* Assets.xcassets in Resources */,
-				A5E8B7CE2C3748D800A97931 /* info.plist in Resources */,
+				A5E8B7CE2C3748D800A97931 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

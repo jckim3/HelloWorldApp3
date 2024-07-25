@@ -11,9 +11,11 @@ import Combine
 struct ContentView: View {
     @State private var message: String = "Loading..."
     @State private var cancellable: AnyCancellable?
+    @State private var testValue: String = "Loading..."
+
     // Base URL 변수
     private let baseURL = "http://192.168.0.192:81/api/motel"
-
+    //private let baseURL = "http://www.carriagemotorinn.com:81/api/motel"
     var body: some View {
         ZStack {
             // 배경 그라데이션
@@ -50,6 +52,12 @@ struct ContentView: View {
                     .shadow(radius: 10)
                     .foregroundColor(.black) // 텍스트 색상 설정
                 
+                Text("Info.plist Test Value: \(testValue)")
+                                    .padding()
+                                    .background(Color.white.opacity(0.8))
+                                    .cornerRadius(10)
+                                    .shadow(radius: 10)
+                                    .foregroundColor(.black)
                 Button(action: {
                     // 첫 번째 버튼이 눌렸을 때 API 호출
                     fetchAvailableRoomsCount()
@@ -92,6 +100,7 @@ struct ContentView: View {
         }
         .onAppear {
             fetchInitialMessage()
+            readInfoPlist()
         }
     }
     
@@ -250,6 +259,21 @@ struct ContentView: View {
                    }
                )
        }
+    func readInfoPlist() {
+        if let path = Bundle.main.path(forResource: "Info", ofType: "plist") {
+            print("Info.plist path: \(path)")
+            if let dict = NSDictionary(contentsOfFile: path) as? [String: Any] {
+                print("Info.plist dictionary: \(dict)")
+                testValue = dict["TestKey"] as? String ?? "No value found"
+            } else {
+                print("Failed to read Info.plist dictionary")
+                testValue = "Unable to read Info.plist dictionary"
+            }
+        } else {
+            print("Failed to find Info.plist path")
+            testValue = "Unable to find Info.plist path"
+        }
+    }
 }
 
 struct SalesResponse: Decodable {
