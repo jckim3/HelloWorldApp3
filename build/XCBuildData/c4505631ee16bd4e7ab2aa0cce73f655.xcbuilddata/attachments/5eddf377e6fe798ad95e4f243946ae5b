@@ -1,0 +1,28 @@
+{
+  "" : {
+    "diagnostics" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3UITests.build/Objects-normal/arm64/CMIApp3UITests-master.dia",
+    "emit-module-dependencies" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3UITests.build/Objects-normal/arm64/CMIApp3UITests-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3UITests.build/Objects-normal/arm64/CMIApp3UITests-master-emit-module.dia",
+    "swift-dependencies" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3UITests.build/Objects-normal/arm64/CMIApp3UITests-master.swiftdeps"
+  },
+  "/Users/jckim/Documents/CMIAPP3/HelloWorldAppUITests/HelloWorldAppUITests.swift" : {
+    "const-values" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3UITests.build/Objects-normal/arm64/HelloWorldAppUITests.swiftconstvalues",
+    "dependencies" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3UITests.build/Objects-normal/arm64/HelloWorldAppUITests.d",
+    "diagnostics" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3UITests.build/Objects-normal/arm64/HelloWorldAppUITests.dia",
+    "index-unit-output-path" : "/CMIApp3.build/Debug-iphoneos/CMIApp3UITests.build/Objects-normal/arm64/HelloWorldAppUITests.o",
+    "llvm-bc" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3UITests.build/Objects-normal/arm64/HelloWorldAppUITests.bc",
+    "object" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3UITests.build/Objects-normal/arm64/HelloWorldAppUITests.o",
+    "swift-dependencies" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3UITests.build/Objects-normal/arm64/HelloWorldAppUITests.swiftdeps",
+    "swiftmodule" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3UITests.build/Objects-normal/arm64/HelloWorldAppUITests~partial.swiftmodule"
+  },
+  "/Users/jckim/Documents/CMIAPP3/HelloWorldAppUITests/HelloWorldAppUITestsLaunchTests.swift" : {
+    "const-values" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3UITests.build/Objects-normal/arm64/HelloWorldAppUITestsLaunchTests.swiftconstvalues",
+    "dependencies" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3UITests.build/Objects-normal/arm64/HelloWorldAppUITestsLaunchTests.d",
+    "diagnostics" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3UITests.build/Objects-normal/arm64/HelloWorldAppUITestsLaunchTests.dia",
+    "index-unit-output-path" : "/CMIApp3.build/Debug-iphoneos/CMIApp3UITests.build/Objects-normal/arm64/HelloWorldAppUITestsLaunchTests.o",
+    "llvm-bc" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3UITests.build/Objects-normal/arm64/HelloWorldAppUITestsLaunchTests.bc",
+    "object" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3UITests.build/Objects-normal/arm64/HelloWorldAppUITestsLaunchTests.o",
+    "swift-dependencies" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3UITests.build/Objects-normal/arm64/HelloWorldAppUITestsLaunchTests.swiftdeps",
+    "swiftmodule" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3UITests.build/Objects-normal/arm64/HelloWorldAppUITestsLaunchTests~partial.swiftmodule"
+  }
+}

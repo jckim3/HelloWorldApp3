@@ -1,0 +1,38 @@
+{
+  "" : {
+    "diagnostics" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/CMIApp3-master.dia",
+    "emit-module-dependencies" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/CMIApp3-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/CMIApp3-master-emit-module.dia",
+    "swift-dependencies" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/CMIApp3-master.swiftdeps"
+  },
+  "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/jckim/Documents/CMIAPP3/HelloWorldApp/ContentView.swift" : {
+    "const-values" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/jckim/Documents/CMIAPP3/HelloWorldApp/HelloWorldAppApp.swift" : {
+    "const-values" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/HelloWorldAppApp.swiftconstvalues",
+    "dependencies" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/HelloWorldAppApp.d",
+    "diagnostics" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/HelloWorldAppApp.dia",
+    "index-unit-output-path" : "/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/HelloWorldAppApp.o",
+    "llvm-bc" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/HelloWorldAppApp.bc",
+    "object" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/HelloWorldAppApp.o",
+    "swift-dependencies" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/HelloWorldAppApp.swiftdeps",
+    "swiftmodule" : "/Users/jckim/Documents/CMIAPP3/build/CMIApp3.build/Debug-iphoneos/CMIApp3.build/Objects-normal/arm64/HelloWorldAppApp~partial.swiftmodule"
+  }
+}

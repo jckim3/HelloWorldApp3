@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+Target 'CMIApp3UITests' in project 'CMIApp3'
+➜ Explicit dependency on target 'CMIApp3' in project 'CMIApp3'
+Target 'CMIApp3Tests' in project 'CMIApp3'
+➜ Explicit dependency on target 'CMIApp3' in project 'CMIApp3'
+Target 'CMIApp3' in project 'CMIApp3' (no dependencies)
