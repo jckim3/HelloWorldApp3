@@ -14,8 +14,8 @@ struct ContentView: View {
     @State private var testValue: String = "Loading..."
 
     // Base URL 변수
-    private let baseURL = "http://192.168.0.192:81/api/motel"
-    //private let baseURL = "http://www.carriagemotorinn.com:81/api/motel"
+    //private let baseURL = "http://192.168.0.192:81/api/motel"
+    private let baseURL = "https://www.carriagemotorinn.com:444/api/motel"
     var body: some View {
         ZStack {
             // 배경 그라데이션
@@ -44,14 +44,16 @@ struct ContentView: View {
                     .foregroundStyle(.tint)
                 
                 Text(message)
-                    .font(.title) // 글꼴 크기 설정
+                    .font(.headline) // 글꼴 크기 설정
                     .fontWeight(.bold) // 글꼴 굵기 설정
                     .padding()
                     .background(Color.white.opacity(0.8))
                     .cornerRadius(10)
                     .shadow(radius: 10)
                     .foregroundColor(.black) // 텍스트 색상 설정
-                
+                    .multilineTextAlignment(.center) // 여러줄로 나누어 중앙 정렬
+                    .lineLimit(nil) // 줄 수 제한 없음
+                    .frame(maxWidth: .infinity) // 최대 너비 제한             
                 Text("Info.plist Test Value: \(testValue)")
                                     .padding()
                                     .background(Color.white.opacity(0.8))

@@ -2,60 +2,65 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>TestKey</key>
-    <string>TestValue</string>
-    <!-- 앱의 기본 설정들 -->
-    <key>CFBundleName</key>
-    <string>MyApp</string>
-    <key>CFBundleDisplayName</key>
-    <string>MyApp</string>
-    <key>CFBundleIdentifier</key>
-    <string>com.mycompany.myapp</string>
-    <key>CFBundleVersion</key>
-    <string>1.0</string>
-    <key>CFBundleShortVersionString</key>
-    <string>1.0</string>
-    <key>UILaunchStoryboardName</key>
-    <string>LaunchScreen</string>
-    <key>UIMainStoryboardFile</key>
-    <string>Main</string>
-    <key>UIRequiredDeviceCapabilities</key>
-    <array>
-        <string>armv7</string>
-    </array>
-    <key>LSRequiresIPhoneOS</key>
-    <true/>
-    <key>UIAppFonts</key>
-    <array>
-        <string>MyCustomFont.ttf</string>
-    </array>
-
-    <!-- 네트워크 설정 -->
-    <key>NSAppTransportSecurity</key>
-    <dict>
-        <key>NSAllowsArbitraryLoads</key>
-        <true/>
-    </dict>
-    <key>NSLocalNetworkUsageDescription</key>
-    <string>로컬 네트워크 접근이 필요합니다.</string>
-    <key>NSBonjourServices</key>
-    <array>
-        <string>_http._tcp</string>
-    </array>
-    <!-- exceptrion-->
-    <key>NSExceptionDomains</key>
-    <dict>
-            <key>carriagemotorinn.com</key>
-            <dict>
-                <key>NSIncludesSubdomains</key>
-                <true/>
-                <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
-                <true/>
-                <key>NSTemporaryExceptionMinimumTLSVersion</key>
-                <string>TLSv1.0</string>
+	<key>TestKey</key>
+	<string>TestValue3</string>
+	<key>CFBundleName</key>
+	<string>MyApp</string>
+	<key>CFBundleDisplayName</key>
+	<string>MyApp</string>
+	<key>CFBundleIdentifier</key>
+	<string>www.carriagemotorinn.com</string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>MyCustomFont.ttf</string>
+	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>carriagemotorinn.com</key>
+			<dict>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                 <true/>
+                 <key>NSIncludesSubdomains</key>
+                 <true/>                  
             </dict>
-        </dict>
-    
+            
+		</dict>
+	</dict>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>로컬 네트워크 접근이 필요합니다.</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_http._tcp</string>
+	</array>
+	<key>NSExceptionDomains</key>
+	<dict>
+		<key>carriagemotorinn.com</key>
+		<dict>
+			<key>NSIncludesSubdomains</key>
+			<true/>
+			<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+			<true/>
+			<key>NSTemporaryExceptionMinimumTLSVersion</key>
+			<string>TLSv1.0</string>
+		</dict>
+	</dict>
 </dict>
 </plist>
-
