@@ -13,7 +13,7 @@ struct ContentView: View {
     @State private var cancellable: AnyCancellable?
     @State private var testValue: String = "Loading..."
     @State private var showAbout: Bool = false
-
+    // Git 
     // Base URL 변수
     //private let baseURL = "http://192.168.0.192:81/api/motel"
     private let baseURL = "https://www.carriagemotorinn.com:444/api/motel"
@@ -31,10 +31,10 @@ struct ContentView: View {
                 HStack {
                     Text(currentDateString())
                         .padding()
-                        .background(Color.white.opacity(0.7))
+                        .background(Color.clear)
                         .cornerRadius(10)
-                        .shadow(radius: 5)
-                        .foregroundColor(.black) // 텍스트 색상 설정
+                        //.shadow(radius: 5)
+                        .foregroundColor(.white) // 텍스트 색상 설정
                     Spacer()
                     Button(action: {
                         showAbout.toggle()
